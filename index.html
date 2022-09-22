@@ -1,44 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="mystyle.css">
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 <title>Index</title>
 <body style="background-color:lavender;">
 </body>
 
-
-
 </html>
 
 
-<h1 style="background-color:DodgerBlue;"><center>Hello, world. My name is Brian Reynolds.</center></h1>
+<h1 style="font-size:5vw; style="background-color:DodgerBlue;"><center>Hello, world. My name is Brian Reynolds.</center></h1>
 
 <div class="topnav">
     <a class="active" href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\index.html">Home</a>
-    <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\traveling.html">Traveling</a>
-    <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\wildlifeconservation.html">Wildlife Conservation</a>
+    <div id="myLinks">
+        <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\traveling.html">Traveling</a>
+        <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\wildlifeconservation.html">Wildlife Conservation</a>
+    </div>
+
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
 </div>
 
-<h3>
+<script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+</script>
+
+<h3 class="welcomeTextDesktop">
     <center>Check out the Traveling page to see things related to traveling. Or, check out the Wildlife Conservation page to see things related to wildlife conservation. Whatever floats your boat really.</center>   
 </h3>
 
-
-<!--<p style="font-size: 20px; color:#1F9AFE;" align="left">
-    <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\about.html">Home</a>
-</p>
-
-<p style="font-size: 20px; color:#1F9AFE;" align="center">
-    <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\notabout.html">Traveling</a>
-</p>
-
-<p style="font-size: 20px; color:#1F9AFE;" align="right">
-    <a href="C:\Users\ibrey\OneDrive\Documents\GitHub\IDSN-530\leastabout.html">Wildlife Conservation</a>
-
--->
-
+<h3 class="welcomeTextMobile">
+    <center>Welcome to the new and improved mobile version.</center>
+</h3>
 
 <br>
 
