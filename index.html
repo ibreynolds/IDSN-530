@@ -3,9 +3,99 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyle.css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script>
+        $(document).ready(function(){
+          $("buttonhide").click(function(){
+            $("#welcomeTextDesktop").hide();
+          });
+        });
+    </script>
+    
+    <script>
+    $(document).ready(function(){
+      $("p").click(function(){
+        $(this).hide();
+      });
+    });
+    </script>
+    
+    <script>
+    $(document).ready(function () {
+        var leftValue = window.innerWidth - 115; // 115 is a temp value
+        var topValue = window.innerHeight - 115;
+        var actionNum = 0;
+        var movingBlock = $('#block');
+    
+    $('#go').click(function () {
+      if (actionNum < 4) {
+        actionNum++;    
+      } else {
+        actionNum = 1;
+      }
+      switch (actionNum) {
+        case 1:
+          movingBlock.animate({
+            left: leftValue + 'px',
+            top: 0
+          }, 1000);
+            break;
+        case 2:
+          movingBlock.animate({
+            left: leftValue + 'px',
+            top: topValue + 'px'
+          }, 1000);
+          break;
+        case 3:
+         movingBlock.animate({
+           top: topValue + 'px',
+              left: 0
+         }, 1000);
+         break;
+        case 4:
+          movingBlock.animate({
+            left: 0,
+            top: 0
+          }, 1000);
+          break;
+        default:
+          break;
+      }
+    });
+  });
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#p1").css("color", "red").slideUp(2000).slideDown(2000);
+      });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        $("#div1").fadeIn();
+        $("#div2").fadeIn("slow");
+        $("#div3").fadeIn(3000);
+      });
+    });
+    </script>
+
+</head>
 <title>Index</title>
-<body style="background-color:lavender;">
+<body style="background-color:lavender;"> 
+    
+    <p>Fades in fancy boxes.</p>
+
+    <button>Click to fade in boxes</button><br><br>
+    
+    <div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+    <div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+    <div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+
 </body>
 
 </html>
@@ -36,13 +126,15 @@
     }
 </script>
 
-<h3 class="welcomeTextDesktop">
+<h3 id="welcomeTextDesktop">
     <center>Check out the Traveling page to see things related to traveling. Or, check out the Wildlife Conservation page to see things related to wildlife conservation. Whatever floats your boat really.</center>   
 </h3>
 
 <h3 class="welcomeTextMobile">
     <center>Welcome to the new and improved mobile version.</center>
 </h3>
+
+<center><button>Hide Message</button></center>
 
 <br>
 
@@ -85,6 +177,13 @@
 
 <br>
 
+<p id="p1">jQuery is fun!!</p>
+
+<button>Click me</button>
+
+<br><br>
+
+
 <h3 style="border:3px solid Tomato;"><center>Spicy Bacon Gibberish &#128040&#128293</center></h3>
 
 <p> 
@@ -109,4 +208,12 @@
     Corned beef cupim swine anim labore quis.
 </p>
 
-<br> Bacon squad y'all
+<br> Bacon squad y'all <br> <br>
+
+
+<p>This thingy should move.</p>
+
+<script> src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div id="block"></div>
+<button id="go">&raquo; Move Box</button>

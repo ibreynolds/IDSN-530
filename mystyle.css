@@ -43,6 +43,22 @@
     display: none;
   }
 
+  #block {
+    width: 100px; 
+    height: 100px; 
+    background: red; 
+    margin: 0px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+    z-index: 1;
+  }
+  #go {
+    z-index: 2;
+    position: relative;
+  }
+
+
  /* Mobile responsive design */
   @media only screen and (max-device-width: 768px) {
 
